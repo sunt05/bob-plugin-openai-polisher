@@ -2,6 +2,13 @@
   "identifier": "xyz.yetone.openai.polisher",
   "versions": [
     {
+      "version": "0.0.4",
+      "desc": "Update README.md",
+      "sha256": "f59a69469f89572fc70f405bd77c58929d5df2b0a483b59144afd44482280a8a",
+      "url": "https://github.com/yetone/bob-plugin-openai-polisher/releases/download/v0.0.4/openai-polisher-0.0.4.bobplugin",
+      "minBobVersion": "0.5.0"
+    },
+    {
       "version": "0.0.3",
       "desc": "Add an option to display the reason for polishing or not.",
       "sha256": "31cdc98bcd9f5bf473c67f5bc2e60da6d3f984b0ac97fdfebce981eb8504981b",
