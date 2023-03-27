@@ -5,7 +5,7 @@ function supportLanguages() {
 }
 
 function translate(query, completion) {
-    const ChatGPTModels = ["gpt-3.5-turbo", "gpt-3.5-turbo-0301"];
+    const ChatGPTModels = ["gpt-4","gpt-3.5-turbo", "gpt-3.5-turbo-0301"];
     const api_keys = $option.api_keys.split(",").map((key) => key.trim());
     const api_key = api_keys[Math.floor(Math.random() * api_keys.length)];
     const header = {
