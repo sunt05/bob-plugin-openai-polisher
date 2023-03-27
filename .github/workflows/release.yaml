@@ -34,24 +34,24 @@ jobs:
       - name: Update appcast.json
         run: |
           python3 scripts/update_appcast.py ${{ steps.get_version.outputs.version-without-v }} '${{ steps.tag.outputs.message }}'
-      
+
       - name: Commit files
         run: |
-          git config --global user.name 'yetone'
-          git config --global user.email 'yetoneful@gmail.com'
+          git config --global user.name 'sunt05'
+          git config --global user.email 'sunting.05@gmail.com'
           git add .
           git commit -am 'update appcast.json'
 
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.PAT}}
 
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2
         with:
           release_name: ${{ steps.get_version.outputs.version }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          repo_token: ${{ secrets.PAT}}
           file: release/openai-polisher-${{ steps.get_version.outputs.version-without-v }}.bobplugin
           asset_name: openai-polisher-${{ steps.get_version.outputs.version-without-v }}.bobplugin
           tag: ${{ github.ref }}
